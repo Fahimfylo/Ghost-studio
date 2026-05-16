@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { TESTIMONIALS } from "@/lib/constants";
+import { TESTIMONIALS } from "@/constants/testimonials";
 import { Card } from "@/components/ui/card";
 import { Quote } from "lucide-react";
 

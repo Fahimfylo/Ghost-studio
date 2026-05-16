@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { PROCESS_STEPS } from "@/lib/constants";
+import { PROCESS_STEPS } from "@/constants/process";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 
 export function ProcessSection() {

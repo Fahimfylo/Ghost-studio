@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { SERVICES } from "@/lib/constants";
+import { SERVICES } from "@/constants/services";
 import { Card } from "@/components/ui/card";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 import Link from "next/link";

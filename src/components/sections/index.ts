@@ -1,0 +1,9 @@
+export { Hero } from "./hero";
+export { ServicesSection } from "./services-section";
+export { ProjectsSection } from "./projects-section";
+export { ProcessSection } from "./process-section";
+export { WhyUs } from "./why-us";
+export { TeamSection } from "./team-section";
+export { TestimonialsTicker } from "./testimonials-ticker";
+export { ContactFormSection } from "./contact-form-section";
+export { AIBlueprintSection } from "./ai-blueprint-section";

@@ -3,12 +3,13 @@
 import * as React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG } from "@/config/site";
+import { contactFormSchema, type ContactFormValues } from "@/schemas/contact";
+import { submitContactForm } from "@/services/contact";
 import { 
   Form, 
   FormControl, 
@@ -28,22 +29,12 @@ import { Mail, Clock, MapPin, Send } from "lucide-react";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 import { useToast } from "@/hooks/use-toast";
 
-const formSchema = z.object({
-  fullName: z.string().min(2, "Full Name is required"),
-  email: z.string().email("Invalid email address"),
-  companyName: z.string().optional(),
-  projectType: z.string().min(1, "Please select a project type"),
-  budget: z.string().min(1, "Please select a budget range"),
-  timeline: z.string().min(1, "Please select a timeline"),
-  message: z.string().min(20, "Message must be at least 20 characters"),
-});
-
 export function ContactFormSection() {
   const { toast } = useToast();
   const [loading, setLoading] = React.useState(false);
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       fullName: "",
       email: "",
@@ -55,10 +46,9 @@ export function ContactFormSection() {
     },
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: ContactFormValues) {
     setLoading(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await submitContactForm(values);
     setLoading(false);
     toast({
       title: "Message Sent!",

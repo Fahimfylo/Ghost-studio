@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { SERVICES } from "@/lib/constants";
+import { SERVICES } from "@/constants/services";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Github, Linkedin, Twitter, MessageSquare } from "lucide-react";
-import { SITE_CONFIG, NAV_LINKS, SERVICES } from "@/lib/constants";
+import { SITE_CONFIG } from "@/config/site";
+import { NAV_LINKS } from "@/config/navigation";
+import { SERVICES } from "@/constants/services";
 
 export function Footer() {
   return (

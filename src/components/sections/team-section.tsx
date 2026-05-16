@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import { TEAM } from "@/lib/constants";
+import { TEAM } from "@/constants/team";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";

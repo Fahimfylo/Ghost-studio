@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { PROJECTS } from "@/lib/constants";
+import { PROJECTS } from "@/constants/projects";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
