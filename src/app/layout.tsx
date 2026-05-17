@@ -6,13 +6,13 @@ import { ThemeProvider } from '@/providers/theme';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Nexlify Studio — Modern Software Development Agency',
+  title: 'DevNest — Modern Software Development Agency',
   description: 'We build full-stack web apps, SaaS platforms, ERP systems, Shopify stores, and AI-powered products. Scalable, modern, fast.',
   openGraph: {
-    title: 'Nexlify Studio',
+    title: 'DevNest',
     description: 'We build software that scales.',
-    url: 'https://nexlify.studio',
-    siteName: 'Nexlify Studio',
+    url: 'https://DevNest',
+    siteName: 'DevNest',
     images: [
       {
         url: 'https://picsum.photos/seed/nexlify/1200/630',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nexlify Studio',
+    title: 'DevNest',
     description: 'We build software that scales.',
     images: ['https://picsum.photos/seed/nexlify/1200/630'],
   },
